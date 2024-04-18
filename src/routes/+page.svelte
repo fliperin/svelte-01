@@ -1,4 +1,7 @@
 <script>
+    import Abduzido from './Abduzido.svelte';
+
+
     let vary = 0;
 
     function aumentar(){
@@ -13,8 +16,17 @@
     <button on:click={aumentar}> teste {vary} </button>
 </div>
 
+<Abduzido/>
+
 <style>
+    *{
+        margin: 0 auto;
+    }
+
     .container{
+        width:100%;
+        height:300px;
+        background-color:aquamarine;
         display: flex;
         flex-flow: column nowrap;
         align-content: center;
@@ -26,6 +38,7 @@
 
     h1, p{
         font-family: 'Segoe UI';
+        color: #333;
     }
 
     button{
