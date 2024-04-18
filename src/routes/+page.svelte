@@ -1,2 +1,47 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    let vary = 0;
+
+    function aumentar(){
+        vary = vary + 2;
+    }
+
+</script>
+
+<div class="container">
+    <h1>Teste de svelte do fliperin</h1>
+    <p>Visite <a href="https://kit.svelte.dev">este link</a> para fazer sei la o que</p>
+    <button on:click={aumentar}> teste {vary} </button>
+</div>
+
+<style>
+    .container{
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+    }
+
+
+    h1, p{
+        font-family: 'Segoe UI';
+    }
+
+    button{
+        padding:10px;
+        border-radius: 5px;
+        width:10%;
+        border-style: none;
+        background-color: #333;
+        color: white;
+        font-size: 20px;
+        cursor:pointer;
+        transition: 0.2s linear;
+    }
+
+    button:hover{
+        filter: brightness(40%);
+    }
+</style>
+
