@@ -3,23 +3,24 @@
 
 
     let vary = 0;
+    let paragraph = 'Visite <a href="https://kit.svelte.dev">este link</a> para fazer sei la o que';
 
     function aumentar(){
-        vary = vary + 2;
+        vary += 1;
     }
 
 </script>
 
 <div class="container">
     <h1>Teste de svelte do fliperin</h1>
-    <p>Visite <a href="https://kit.svelte.dev">este link</a> para fazer sei la o que</p>
-    <button on:click={aumentar}> teste {vary} </button>
+    <p>{@html paragraph}</p>
+    <button on:click={aumentar}> clicou {vary} {vary === 1 ? 'vez' : 'vezes'}</button>
 </div>
 
 <Abduzido/>
 
 <style>
-    *{
+    :global(body){
         margin: 0 auto;
     }
 
@@ -48,7 +49,7 @@
         border-style: none;
         background-color: #333;
         color: white;
-        font-size: 20px;
+        font-size: 16px;
         cursor:pointer;
         transition: 0.2s linear;
     }
