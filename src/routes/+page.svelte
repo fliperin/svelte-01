@@ -17,7 +17,18 @@
     <button on:click={aumentar}> clicou {vary} {vary === 1 ? 'vez' : 'vezes'}</button>
 </div>
 
-<Abduzido/>
+<div class="container2">
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+    <Abduzido/>
+</div>
 
 <style>
     :global(body){
@@ -34,6 +45,13 @@
         align-items: center;
         justify-content: center;
         justify-self: center;
+    }
+
+    .container2{
+        width:100%;
+        height:300px;
+        display: flex;
+        flex-flow: row wrap;
     }
 
 
